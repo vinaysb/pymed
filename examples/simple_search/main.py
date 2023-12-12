@@ -1,3 +1,5 @@
+""" This script shows how to use pymed to query the PubMed API. """
+
 from pymed import PubMed
 
 
@@ -7,17 +9,16 @@ from pymed import PubMed
 pubmed = PubMed(tool="MyTool", email="my@email.address")
 
 # Create a GraphQL query in plain text
-query = "occupational health[Title]"
+QUERY = "occupational health[Title]"
 
 
 # Execute the query against the API
-results = pubmed.query(query, max_results=500)
+results = pubmed.query(QUERY, max_results=500)
 
 # Loop over the retrieved articles
 for article in results:
-
     # Print the type of object we've found (can be either PubMedBookArticle or PubMedArticle)
     print(type(article))
 
     # Print a JSON representation of the object
-    print(article.toJSON())
+    print(article.to_json())

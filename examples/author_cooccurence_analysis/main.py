@@ -1,3 +1,5 @@
+""" This example shows how to create a co-authorship network from a PubMed query. """
+
 import csv
 import itertools
 
@@ -10,11 +12,11 @@ from pymed import PubMed
 pubmed = PubMed(tool="Author co-occurence analysis", email="my@email.address")
 
 # Create a GraphQL query in plain text
-query = "occupational health[Title]"
+QUERY = "occupational health[Title]"
 
 
 # Execute the query against the API
-results = list(pubmed.query(query, max_results=1344))
+results = list(pubmed.query(QUERY, max_results=1344))
 
 
 # Create a node for each unique author
@@ -57,7 +59,6 @@ edges = set([(edge[0], edge[1], edges.count(edge)) for edge in edges])
 
 # Open the nodes file
 with open("./nodes.csv", "w", encoding="utf8", newline="") as nodes_file:
-
     # Create a CSV writer
     writer = csv.writer(nodes_file, delimiter=",")
 
@@ -70,7 +71,6 @@ with open("./nodes.csv", "w", encoding="utf8", newline="") as nodes_file:
 
 
 with open("./edges.csv", "w", encoding="utf8", newline="") as edge_file:
-
     # Create a CSV writer
     writer = csv.writer(edge_file, delimiter=",")
 
