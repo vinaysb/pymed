@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "pymed"
+version = "0.8.9" # replace with your current version
+description = "Python library for access to PubMed"
+readme = "README.md"
+authors = [
+    { name = "Vinay Bharadhwaj", email = "vinaysbharadhwaj@gmail.com"},
+]
+license = { file = "LICENCE" }
+keywords = ["PubMed", "PMC"]
+classifiers = [
+    "Topic :: Utilities",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "requests>=2.20.0",
+]
+
+[project.urls]
+homepage = "https://github.com/vinaysb/pymed"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "tox",
+]
