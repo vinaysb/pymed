@@ -1,5 +1,3 @@
-> IMPORTANT NOTE: I don't have time to maintain this library (as some of you might have noticed). The PubMed API is a little chaotic, without a clear documentation and no single way of doing things, making it almost impossible to create a proper library. Feel free to create a fork or use the code for your own projects, however, I will archive this repository. Thanks to all contributers and users!
-
 # PyMed - PubMed Access through Python
 PyMed is a Python library that provides access to PubMed through the PubMed API.
 
@@ -29,6 +27,9 @@ The original documentation of the PubMed API can be found here: [PubMed Central]
 > - Include two parameters that help to identify your service or application to our servers
 >   * _tool_ should be the name of the application, as a string value with no internal spaces, and
 >   * _email_ should be the e-mail address of the maintainer of the tool, and should be a valid e-mail address.
+
+## To Do
+- [ ] Add the ability to set/reduce the number of bins to make as less requests as possible
 
 ## Notice of Non-Affiliation and Disclaimer 
 The author of this library is not affiliated, associated, authorized, endorsed by, or in any way officially connected with PubMed, or any of its subsidiaries or its affiliates. The official PubMed website can be found at https://www.ncbi.nlm.nih.gov/pubmed/.
