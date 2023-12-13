@@ -87,7 +87,7 @@ class Paper(PubMedBaseArticle):
         Returns:
             str: PubMed ID of the article.
         """
-        path = ".//ArticleId[@IdType='pubmed']"
+        path = "MedlineCitation/PMID"
         return get_content(element=xml_element, path=path)
 
     def extract_title(self, xml_element: Element) -> str:
