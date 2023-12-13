@@ -37,7 +37,9 @@ class TestPubMed(unittest.TestCase):
         """
         mock_get_article_ids.return_value = [1, 2, 3]
         self.pubmed.query("test_query", max_results=3)
-        mock_get_article_ids.assert_called_once_with(query="test_query", max_results=3)
+        mock_get_article_ids.assert_called_once_with(
+            query="test_query", max_results=3, start_year=1900
+        )
         mock_get_articles.assert_called()
 
     @patch.object(PubMed, "get")
